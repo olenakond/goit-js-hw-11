@@ -34,6 +34,7 @@ formEl.addEventListener('submit', handlerForm);
 function handlerForm(evt) {
   evt.preventDefault();
   galleryEl.innerHTML = '';
+  currentPage = 1;
   observer.unobserve(targetEl);
 
   searchName = evt.currentTarget.elements.searchQuery.value.trim();
@@ -169,6 +170,7 @@ function createGallery(arr) {
 // function handlerForm(evt) {
 //   evt.preventDefault();
 //   galleryEl.innerHTML = '';
+//   currentPage = 1;
 //   loadBtnEl.hidden = true;
 
 //   searchName = evt.currentTarget.elements.searchQuery.value.trim();
